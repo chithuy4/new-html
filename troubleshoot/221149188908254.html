@@ -10,14 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="shortcut icon" href="../ico.ico" type="image/x-icon">
-    <style>
-        .h-imp{
-            height: 0 !important;
-        }
-        .m-imp {
-            margin: 0 !important;
-        }
-    </style>
+
 </head>
 
 <body>
@@ -4710,15 +4703,7 @@
         detectUtmUserLeftBar()
         delectAccountUtm()
         delectTicketIdUtm()
-
-        myInterval = setInterval(myTimer, 50);
-
-        function myTimer() {
-            if (!document.getElementById('tr-stripe').classList.contains('h-imp')) {
-                document.getElementById('tr-stripe').classList.add("h-imp");
-                clearInterval(myInterval);
-            }
-        }
+        
     </script>
 </body>
 
