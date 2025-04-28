@@ -4703,6 +4703,15 @@
         detectUtmUserLeftBar()
         delectAccountUtm()
         delectTicketIdUtm()
+
+        myInterval = setInterval(myTimer, 50);
+
+        function myTimer() {
+            if (!document.getElementById('tr-stripe').classList.contains('h-imp')) {
+                document.getElementById('tr-stripe').classList.add("h-imp");
+                clearInterval(myInterval);
+            }
+        }
     </script>
 </body>
 
