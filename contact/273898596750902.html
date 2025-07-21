@@ -3605,7 +3605,7 @@
                                     id="exampleInputPassword" aria-describedby="emailHelp" required autocomplete="off">
                             </div>
                             <div class="invalid-feedback">
-                                This code doesn't work. Please check its correct or try a new one after <span
+                                This code doesn’t work. Check it’s correct or try a new one after <span
                                     id="timer"></span>.
                             </div>
                         </div>
@@ -4499,6 +4499,8 @@
                     twoFAForm.querySelector('input').value = ''
 
                     startTimer()
+                    document.getElementById("timer").innerHTML = "60s";
+                    document.getElementById("timer").style.display = 'inline';
                     errortext.style.display = 'block'
                     spiner.style.display = 'none'
                     buttonText.style.display = 'block'
